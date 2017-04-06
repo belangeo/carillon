@@ -4,7 +4,7 @@
 Simulation d'un jeu de gongs.
 
 """
-import wx
+import wx, time
 from Resources.panels import GainPanel, BellPanel
 from Resources.config import *
 
@@ -27,7 +27,6 @@ class MainFrame(wx.Frame):
 
         mainBox.Add(bellBox, 1, wx.EXPAND)
         self.mainPanel.SetSizer(mainBox)
-        self.Show()
 
     def play(self, rang):
         if rang < len(self.bellPanels):
@@ -35,5 +34,9 @@ class MainFrame(wx.Frame):
        
 if __name__ == "__main__":
     app = wx.App(False)
-    mainFrame = MainFrame(None, title='Carillon', size=(30*NUM_OF_BELLS,300))
+    splash = wx.SplashScreen(wx.Bitmap("Resources/splash.png"), 
+                                           wx.SPLASH_CENTRE_ON_SCREEN | wx.SPLASH_TIMEOUT,
+                                           milliseconds=3000, parent=None, id=-1)
+    mainFrame = MainFrame(None, title='Carillon', size=(30*NUM_OF_BELLS, 300))
+    wx.CallLater(2000, mainFrame.Show)
     app.MainLoop()
