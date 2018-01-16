@@ -1,16 +1,25 @@
 1 - Énoncé:
     Jeu de cloches polyphonique. 
 
-2 - Analyses des besoins:
+2 - Description:
+
+    Ce programme mettera en place en jeu de cloches, avec contrôle sur la hauteur et le 
+    timbre des cloches, avec lequel l'utilisateur pourra jouer à partir du clavier de 
+    l'ordinateur. Le son sera construit à partir d'une synthèse sonore, le système sera 
+    multiphonique et le tout prendra la forme d'une application autonome. 
+
+3 - Analyses des besoins:
     Cloche : Système excitation + résonance.
     Contrôles graphiques : Contrôle sur la hauteur de la résonance et le timbre des cloches.
     Mode de jeu : Notes activées par les touches du clavier, à la manière d'un piano.
 
-3 - Acquisition de connaissances:
+4 - Acquisition de connaissances:
     Recherches sur les modes de résonance d'une cloche. 
     L'influence de la forme, des matériaux, de la vélocité de l'attaque, etc.
+    Références :
+    http://carillontech.org/timbre.html
 
-4 - Modèle:
+5 - Modèle:
     Une cloche est un système excitation + résonance.
 
     L'excitation, dans sa forme la plus simple, peut être réduite à une impulsion 
@@ -22,7 +31,7 @@
     simulée à l'aide d'une synthèse additive. le modèle sera ici simplifié à 
     l'aide d'un résonateur de forme conique, permettant le désaccord des résonances.
 
-5 - Méthode:
+6 - Méthode:
     Une classe audio contiendra un générateur d'impulsion, sous la forme d'un bruit
     filtré de courte durée, couplé à un résonateur (délais et filtres)
     dont les modes de résonance peuvent être compressés afin de simuler différentes
@@ -32,6 +41,6 @@
     contrôlant la hauteur de la note fondamentale de la cloche. Chaque cloche se
     verra asservie à une touche du clavier afin d'en contrôler le déclenchement.
     
-6 - Implémentation:
+7 - Implémentation:
 
-7 - Test et maintenance
+8 - Test et maintenance
