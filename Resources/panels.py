@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 import wx, random
-from audio import Bell, audioServer
+from .audio import Bell, audioServer
 
 class BasePanel(wx.Panel):
     def __init__(self, parent, rang=None):
@@ -53,7 +53,10 @@ class BellPanel(BasePanel):
         freq = self.bell.waveguide.freq
         box = wx.BoxSizer(wx.VERTICAL)
         self.freqText = wx.StaticText(self, -1, label="%d" % freq)
-        box.Add(self.freqText)
+        font, psize = self.freqText.GetFont(), self.freqText.GetFont().GetPointSize()
+        font.SetPointSize(psize-2)
+        self.freqText.SetFont(font)
+        box.Add(self.freqText, 0, wx.LEFT, 2)
         self.freqSlider = wx.Slider(self, -1, minValue=20, maxValue=2000, value=freq,
                                     size=(-1,200), style=wx.SL_VERTICAL|wx.SL_INVERSE)
         self.freqSlider.Bind(wx.EVT_SLIDER, self.setFreq)

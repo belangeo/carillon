@@ -34,10 +34,6 @@ class MainFrame(wx.Frame):
        
 if __name__ == "__main__":
     app = wx.App(False)
-    #splash = wx.SplashScreen(wx.Bitmap("Resources/splash.png"), 
-    #                                       wx.SPLASH_CENTRE_ON_SCREEN | wx.SPLASH_TIMEOUT,
-    #                                       milliseconds=3000, parent=None, id=-1)
-    mainFrame = MainFrame(None, title='Carillon', size=(30*NUM_OF_BELLS, 300))
-    #wx.CallLater(2000, mainFrame.Show)
+    mainFrame = MainFrame(None, title='Carillon', size=(40*NUM_OF_BELLS+5, 300))
     mainFrame.Show()
     app.MainLoop()

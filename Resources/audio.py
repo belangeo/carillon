@@ -5,7 +5,7 @@ Definition du materiel audio.
 
 """
 from pyo import *
-from config import *
+from .config import *
 
 audioServer = Server(sr=44100, nchnls=2, buffersize=256).boot()
 audioServer.start()
