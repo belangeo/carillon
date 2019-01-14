@@ -12,12 +12,14 @@
     Cloche : Système excitation + résonance.
     Contrôles graphiques : Contrôle sur la hauteur de la résonance et le timbre des cloches.
     Mode de jeu : Notes activées par les touches du clavier, à la manière d'un piano.
+    Sauvegarde : Système pour enregistrer la performance dans un fichier sonore.
 
 4 - Acquisition de connaissances:
     Recherches sur les modes de résonance d'une cloche. 
     L'influence de la forme, des matériaux, de la vélocité de l'attaque, etc.
     Références :
-    http://carillontech.org/timbre.html
+    http://tchorski.morkitu.org/1/son-cloche.htm
+    http://tchorski.morkitu.org/1/son-cloche-2.htm
 
 5 - Modèle:
     Une cloche est un système excitation + résonance.
