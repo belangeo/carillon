@@ -4,7 +4,7 @@
 Simulation d'un jeu de gongs.
 
 """
-import wx, time
+import wx
 from Resources.panels import GainPanel, BellPanel
 from Resources.config import *
 
